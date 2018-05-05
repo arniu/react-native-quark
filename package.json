@@ -1,0 +1,61 @@
+{
+  "name": "react-native-quark",
+  "version": "1.0.0-alpha",
+  "description": "An ART-based qrcode component for react-native",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "prettier --write '**/*.{js,ts,md}'; standard --fix",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{ts,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanqfanh/react-native-quark.git"
+  },
+  "keywords": [
+    "react-native",
+    "barcode",
+    "qrcode",
+    "ART"
+  ],
+  "author": "Fanqh Team",
+  "license": "MIT",
+  "homepage": "https://github.com/fanqfanh/react-native-quark#readme",
+  "bugs": {
+    "url": "https://github.com/fanqfanh/react-native-quark/issues"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "react": "16.3.x",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "qr.js": "0.0.0"
+  }
+}
