@@ -32,6 +32,16 @@ import Quark from 'react-native-quark'
 const App = () => <Quark value="Quark，你好!" />
 ```
 
+## Prop Types
+
+|            Name | Type      | Default | Description                      |
+| --------------: | --------- | ------- | -------------------------------- |
+|            size | `?number` | 128     | Size of the QRCode               |
+|           value | `?string` | -       | QRCode content                   |
+|           color | `?string` | -       | color of the QRCode              |
+| backgroundColor | `?string` | -       | background color of the QRCode   |
+|           style | `any`     | -       | style of `ART.Surface` component |
+
 ## License
 
 [MIT](./LICENSE)
