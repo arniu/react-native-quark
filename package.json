@@ -1,6 +1,6 @@
 {
   "name": "react-native-quark",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta",
   "description": "An ART-based qrcode component for react-native",
   "main": "index.js",
   "scripts": {
