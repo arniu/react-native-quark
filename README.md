@@ -36,8 +36,8 @@ const App = () => <Quark value="Quark，你好!" />
 
 |            Name | Type      | Default | Description                      |
 | --------------: | --------- | ------- | -------------------------------- |
-|            size | `?number` | 128     | Size of the QRCode               |
-|           value | `?string` | -       | QRCode content                   |
+|            size | `?number` | 128     | size of the QRCode               |
+|           value | `string`  | -       | QRCode content                   |
 |           color | `?string` | -       | color of the QRCode              |
 | backgroundColor | `?string` | -       | background color of the QRCode   |
 |           style | `any`     | -       | style of `ART.Surface` component |

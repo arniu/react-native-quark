@@ -38,9 +38,9 @@ const Quark = ({ value, ...props }) => {
 
 Quark.defaultProps = {
   size: 128,
-  value: 'Hello Quark!'
+  value: 'Hello Quark!',
   // backgroundColor: 'white',
-  // color: 'black'
+  color: 'black'
 }
 
 export default Quark
