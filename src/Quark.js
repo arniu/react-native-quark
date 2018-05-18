@@ -5,6 +5,19 @@ import qr from 'qr.js'
 import render from './render'
 import encode from './encode'
 
+// From qr.js
+const ECL = {
+  L: 1, // 7%
+  M: 0, // 15%, default
+  Q: 3, // 20%
+  H: 2 // 30%
+}
+
+const parseECL = ecl => {
+  const key = typeof ecl === 'string' ? ecl : ''
+  return ECL[key.toUpperCase()] || ECL.M
+}
+
 const Quark = ({ value, ...props }) => {
   const style = StyleSheet.flatten([
     {
@@ -17,7 +30,7 @@ const Quark = ({ value, ...props }) => {
   ])
 
   const cells = qr(encode(value), {
-    errorCorrectLevel: props.errorCorrectLevel || 0
+    errorCorrectLevel: parseECL(props.errorCorrectLevel)
   }).modules
 
   return (
@@ -37,10 +50,12 @@ const Quark = ({ value, ...props }) => {
 }
 
 Quark.defaultProps = {
+  // value: 'Hello!',
   size: 128,
-  value: 'Hello Quark!',
-  // backgroundColor: 'white',
-  color: 'black'
+  errorCorrectLevel: 'M',
+  backgroundColor: 'transparent',
+  color: 'black',
+  style: null
 }
 
 export default Quark
