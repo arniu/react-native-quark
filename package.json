@@ -36,6 +36,7 @@
     "react-native",
     "barcode",
     "qrcode",
+    "quark",
     "ART"
   ],
   "author": "Fanqh Team",
