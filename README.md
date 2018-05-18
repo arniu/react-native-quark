@@ -8,7 +8,9 @@
 [standard-badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 
-An ART-based qrcode component for react-native, which is much **faster** than those based webview.
+An ART-based qrcode component for react-native, which is much **faster** than those based `WebView`.
+
+![screenshot for react-native-quark](./example/screenshot.png)
 
 ## Prerequisite
 
@@ -31,20 +33,42 @@ npm i react-native-quark
 
 ```jsx harmony
 import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import Quark from 'react-native-quark'
 
-const App = () => <Quark value="Quark，你好!" />
+export default () => (
+  <View style={styles.container}>
+    <Quark value="Hello!" />
+    <Quark value="Quark!" style={styles.quark} />
+    <Quark value="您好!" color="navy" />
+  </View>
+)
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  quark: {
+    margin: 40,
+    color: 'purple'
+  }
+})
 ```
 
 ## Prop Types
 
-|            Name | Type      | Default | Description                      |
-| --------------: | --------- | ------- | -------------------------------- |
-|            size | `?number` | 128     | size of the QRCode               |
-|           value | `string`  | -       | QRCode content                   |
-|           color | `?string` | -       | color of the QRCode              |
-| backgroundColor | `?string` | -       | background color of the QRCode   |
-|           style | `any`     | -       | style of `ART.Surface` component |
+|              Name | Type      | Default       | Description                       |
+| ----------------: | --------- | ------------- | --------------------------------- |
+|             value | `string`  | -             | QRCode content, **required**      |
+|              size | `?number` | 128           | size of the QRCode                |
+|             color | `?string` | 'black'       | color of the QRCode               |
+|   backgroundColor | `?string` | 'transparent' | background color of the QRCode    |
+| errorCorrectLevel | `?string` | 'M'           | `errorCorrectLevel` of the QRCode |
+|             style | `any`     | null          | style of `ART.Surface` component  |
+
+> You can set `color` and `backgroundColor` in `style`.
 
 ## Acknowledge
 

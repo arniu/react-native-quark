@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Quark from 'react-native-quark'
 
 export default () => (
   <View style={styles.container}>
-    <Quark value='Quark，你好!' />
-    <Text style={styles.title}>Quark</Text>
+    <Quark value='Hello!' />
+    <Quark value='Quark!' style={styles.quark} />
+    <Quark value='您好!' color='navy' />
   </View>
 )
 
@@ -15,7 +16,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  title: {
-    margin: 5
+  quark: {
+    margin: 40,
+    color: 'purple'
   }
 })
