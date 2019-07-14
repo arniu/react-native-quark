@@ -1,5 +1,7 @@
 # react-native-quark
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/arniu/react-native-quark.svg)](https://greenkeeper.io/)
+
 [![npm][npm-badge]](https://www.npmjs.com/package/react-native-quark)
 [![code style: standard][standard-badge]](https://standardjs.com)
 [![code style: prettier][prettier-badge]](https://prettier.io/)
